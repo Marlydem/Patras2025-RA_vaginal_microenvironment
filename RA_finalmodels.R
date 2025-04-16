@@ -1142,7 +1142,7 @@ cytokine_data_samples <- read.csv("Metadata_RAstudy_categorized_cytokinesLABELED
 
 # 1. Prepare the data
 # Extract cytokine columns (e.g., columns prefixed with 'cyt_')
-cytokine_data <- cytokine_data_samples %>% select(starts_with("cyt_"))
+cytokine_data <- cytokine_data_samples %>% dplyr::select(starts_with("cyt_"))
 metadata <- cytokine_data_samples$RA_status  # Replace with your metadata column
 metadata_diet <- cytokine_data_samples$Diet_RAbin  # Replace with your metadata column
 metadata_menopause <- cytokine_data_samples$RA_menopausebin  # Replace with your metadata column
